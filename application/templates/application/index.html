@@ -1,0 +1,35 @@
+{% extends 'application/base.html' %}
+
+{% block content %}
+    <div class="clear"></div>
+    <div class="content">
+        <div class="title-main"><h1>{{ title }}</h1></div>
+        <table>
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Возраст</td>
+                <td>Отдел</td>
+                <td>Язык</td>
+                <td>Опции</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for e in employees %}
+                <tr>
+                    <td>{{ e.id }}</td>
+                    <td>{{ e.first_name }}</td>
+                    <td>{{ e.last_name }}</td>
+                    <td>{{ e.age }}</td>
+                    <td>{{ e.departament }}</td>
+                    <td>{{ e.programing_language }}</td>
+                    <td><p><a href="{{ e.get_absolute_url }}">Редактировать</a></p><p><a
+                            href="{{ e.get_delete_url }}">Удалить</a></p></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

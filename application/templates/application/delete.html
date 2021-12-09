@@ -1,0 +1,10 @@
+{% extends 'application/base.html' %}
+
+{% block content %}
+    <div class="clear"></div>
+    <div class="title-main"><h1>{{ title }}</h1></div>
+    <form method="post">{% csrf_token %}
+        <p>Вы действительно хотите удалить пользователя? "{{ object }}"?</p>
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock %}
