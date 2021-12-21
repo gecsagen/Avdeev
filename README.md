@@ -21,7 +21,7 @@
     * 'delete/<slug:pk>/' - страница удаления данных сотрудника
 
 ***
-<img height="300" src="https://i.ibb.co/ZGmmPHy/1.png" width="450"/>
+<img height="350" src="https://i.ibb.co/ZGmmPHy/1.png" width="600"/>
 
 ### Пакеты и файлы:
 
